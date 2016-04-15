@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API CHALLENGE WIZESERVICE</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+  <!-- JQUERY -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <!-- SCRIPTING FOR GET REQUEST -->
+  <script src="src/main.js" ></script>
+</head>
+<body>
+
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Request API Challenge</h1>
+      <p></p>
+    </div>
+
+    <button id="challenge_new_button" type="button" class="btn btn-primary">Get challenge!</button>
+    <span> </span><span id="clock">60</span> <span>sec</span>
+    <table id="challenge_table" class="table table-condensed">
+       <thead>
+         <tr>
+           <th></th>
+         </tr>
+       </thead>
+       <tbody id="challange_tbody">
+         <!-- DYNAMIC DEPENDS ON THE CHALLENGE -->
+         <tr class="text-center" id="last">
+           <td>
+             <label for="res">Total:</label>
+           </td>
+           <td>
+             <div class="form-group">
+              <input type="number" class="form-control" id="res">
+            </div>
+           </td>
+         </tr>
+       </tbody>
+     </table>
+     <button id="challenge_verify_button" type="button" class="btn btn-primary">Submit answer!</button>
+  </div>
+
+  <div id="msgModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Alert</h4>
+      </div>
+      <div class="modal-body">
+        <p id="modal_text"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
